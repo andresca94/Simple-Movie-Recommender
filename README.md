@@ -13,7 +13,9 @@ The following are the steps involved:
 
 To build a clone of IMDB's Top 250, let's use a weighted rating formula as a metric/score.
 
-\begin{equation} \text Weighted Rating (\bf WR) = \left({{\bf v} \over {\bf v} + {\bf m}} \cdot R\right) + \left({{\bf m} \over {\bf v} + {\bf m}} \cdot C\right) \end{equation}
+$$\begin{equation} \text Weighted Rating (\bf WR) = \left({{\bf v} \over {\bf v} + {\bf m}} \cdot R\right) + \left({{\bf m} \over {\bf v} + {\bf m}} \cdot C\right) \end{equation}
+
+
 
 Where:
 
