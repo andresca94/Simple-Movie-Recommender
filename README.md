@@ -33,7 +33,7 @@ Determining an appropriate value for m is a hyperparameter that you can choose a
 
 I'm gonna use a cutoff m as the 90th percentile. In other words, for a movie to be featured in the charts, it must have more votes than at least 90% of the movies on the list. As percentile decreases, the number of movies considered will increase.</p>
 
-Next and the most important step is to calculate the weighted rating for each qualified movie. To do this, you will:
+Next and the most important step is to calculate the weighted rating for each qualified movie. To do this:
 
 Define a function, weighted_rating();
 I have calculated m and C so will be just pass them as an argument to the function;
