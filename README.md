@@ -31,10 +31,13 @@ Where:
 
 Next and the most important step is to calculate the weighted rating for each qualified movie. To do this:
 
-Define a function, weighted_rating();
-I have calculated m and C so will be just pass them as an argument to the function;
-Then select the vote_count(v) and vote_average(R) column from the q_movies data frame;
-Finally, compute the weighted average and return the result.
+* Define a function, weighted_rating()
+
+* I have calculated m and C so will be just pass them as an argument to the function
+
+* Then select the vote_count(v) and vote_average(R) column from the q_movies data frame
+
+* Finally, compute the weighted average and return the result.
 
 ## Content based recommender
 
