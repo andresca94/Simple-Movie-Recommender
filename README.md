@@ -1,7 +1,7 @@
 # Simple-Movie-Recommender
 
 ## Simple-Movie-Recommender
-<p align="justify">Simple recommenders are basic systems that recommend the top items based on a certain metric or score.I'm gonna create a simplified clone of IMDB Top 250 Movies using metadata collected from IMDB.</p>
+<p align="justify">Simple recommenders are basic systems that recommend the top items based on a certain metric or score. I'm gonna create a simplified clone of IMDB Top 250 Movies using metadata collected from IMDB.</p>
 
 The following are the steps involved:
 
@@ -27,7 +27,7 @@ Where:
 
 * C is the mean vote across the whole report.
 
-<p align="justify">I already have the values to v (vote_count) and R (vote_average) for each movie in the dataset. It is also possible to directly calculate C from this data.Determining an appropriate value for m is a hyperparameter that you can choose accordingly since there is no right value for m. You can consider it as a preliminary negative filter that will simply remove the movies which have a number of votes less than a certain threshold m.I'm gonna use a cutoff m as the 90th percentile. In other words, for a movie to be featured in the charts, it must have more votes than at least 90% of the movies on the list. As percentile decreases, the number of movies considered will increase.</p>
+<p align="justify">I already have the values to v (vote_count) and R (vote_average) for each movie in the dataset. It is also possible to directly calculate C from this data.Determining an appropriate value for m is a hyperparameter that you can choose accordingly since there is no right value for m. You can consider it as a preliminary negative filter that will simply remove the movies which have a number of votes less than a certain threshold m. I'm gonna use a cutoff m as the 90th percentile. In other words, for a movie to be featured in the charts, it must have more votes than at least 90% of the movies on the list. As percentile decreases, the number of movies considered will increase.</p>
 
 Next and the most important step is to calculate the weighted rating for each qualified movie. To do this:
 
@@ -60,7 +60,7 @@ This system has done a decent job of finding movies with similar plot descriptio
 
 ### Credits, Genres, and Keywords Based Recommender
 <p align="justify">
-The quality of your recommender would be increased with the usage of better metadata and by capturing more of the finer details. I'm gonna build a recommender system based on the following metadata: the 3 top actors, the director, related genres, and the movie plot keywords.The keywords, cast, and crew data are not available in the current dataset, so the first step would be to load and merge them into the main DataFrame metadata.From your new features, cast, crew, and keywords, you need to extract the three most important actors, the director and the keywords associated with that movie.</p>
+The quality of your recommender would be increased with the usage of better metadata and by capturing more of the finer details. I'm gonna build a recommender system based on the following metadata: the 3 top actors, the director, related genres, and the movie plot keywords.The keywords, cast, and crew data are not available in the current dataset, so the first step would be to load and merge them into the main DataFrame metadata. From your new features, cast, crew, and keywords, you need to extract the three most important actors, the director and the keywords associated with that movie.</p>
 
 ## Suggestions
 
