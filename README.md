@@ -1,6 +1,6 @@
 # Simple-Movie-Recommender
 
-##Simple-Movie-Recommender
+## Simple-Movie-Recommender
 Simple recommenders are basic systems that recommend the top items based on a certain metric or score.I'm gonna create a simplified clone of IMDB Top 250 Movies using metadata collected from IMDB.
 
 The following are the steps involved:
@@ -19,11 +19,11 @@ Where:
 
 * v is the number of votes for the movie;
 
-*m is the minimum votes required to be listed in the chart;
+* m is the minimum votes required to be listed in the chart;
 
-*R is the average rating of the movie;
+* R is the average rating of the movie;
 
-*C is the mean vote across the whole report.
+* C is the mean vote across the whole report.
 
 I already have the values to v (vote_count) and R (vote_average) for each movie in the dataset. It is also possible to directly calculate C from this data.
 
