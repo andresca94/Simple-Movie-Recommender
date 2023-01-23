@@ -1,7 +1,7 @@
 # Simple-Movie-Recommender
 
 ## Simple-Movie-Recommender
-Simple recommenders are basic systems that recommend the top items based on a certain metric or score.I'm gonna create a simplified clone of IMDB Top 250 Movies using metadata collected from IMDB.
+<p align="justify">Simple recommenders are basic systems that recommend the top items based on a certain metric or score.I'm gonna create a simplified clone of IMDB Top 250 Movies using metadata collected from IMDB.</p>
 
 The following are the steps involved:
 
@@ -25,11 +25,11 @@ Where:
 
 * C is the mean vote across the whole report.
 
-I already have the values to v (vote_count) and R (vote_average) for each movie in the dataset. It is also possible to directly calculate C from this data.
+<p align="justify">I already have the values to v (vote_count) and R (vote_average) for each movie in the dataset. It is also possible to directly calculate C from this data.
 
 Determining an appropriate value for m is a hyperparameter that you can choose accordingly since there is no right value for m. You can consider it as a preliminary negative filter that will simply remove the movies which have a number of votes less than a certain threshold m.
 
-I'm gonna use a cutoff m as the 90th percentile. In other words, for a movie to be featured in the charts, it must have more votes than at least 90% of the movies on the list. As percentile decreases, the number of movies considered will increase.
+I'm gonna use a cutoff m as the 90th percentile. In other words, for a movie to be featured in the charts, it must have more votes than at least 90% of the movies on the list. As percentile decreases, the number of movies considered will increase.</p>
 
 Next and the most important step is to calculate the weighted rating for each qualified movie. To do this, you will:
 
@@ -41,7 +41,7 @@ Finally, compute the weighted average and return the result.
 ## Content based recommender
 
 ### Plot Description Based Recommender
-I'm gonna build a system that recommends movies that are similar to a particular movie. To achieve this, I'm gonna compute pairwise cosine similarity scores for all movies based on their plot descriptions and recommend movies based on that similarity score threshold.
+<p align="justify">I'm gonna build a system that recommends movies that are similar to a particular movie. To achieve this, I'm gonna compute pairwise cosine similarity scores for all movies based on their plot descriptions and recommend movies based on that similarity score threshold.
 
 The problem is a Natural Language Processing problem:
 
@@ -55,20 +55,20 @@ To do this I'm gonna compute Term Frequency-Inverse Document Frequency (TF-IDF) 
 
 In its essence, the TF-IDF score is the frequency of a word occurring in a document, down-weighted by the number of documents in which it occurs. This is done to reduce the importance of words that frequently occur in plot overviews and, therefore, their significance in computing the final similarity score.
 
-This system has done a decent job of finding movies with similar plot descriptions but the quality of recommendations is not that great. "The Dark Knight Rises" returns all Batman movies while it is more likely that the people who liked that movie are more inclined to enjoy other Christopher Nolan movies. This is something that cannot be captured by the present system.
+This system has done a decent job of finding movies with similar plot descriptions but the quality of recommendations is not that great. "The Dark Knight Rises" returns all Batman movies while it is more likely that the people who liked that movie are more inclined to enjoy other Christopher Nolan movies. This is something that cannot be captured by the present system.</p>
 
 ### Credits, Genres, and Keywords Based Recommender
-
+<p align="justify">
 The quality of your recommender would be increased with the usage of better metadata and by capturing more of the finer details. I'm gonna build a recommender system based on the following metadata: the 3 top actors, the director, related genres, and the movie plot keywords.
 
 The keywords, cast, and crew data are not available in the current dataset, so the first step would be to load and merge them into the main DataFrame metadata.
 
-From your new features, cast, crew, and keywords, you need to extract the three most important actors, the director and the keywords associated with that movie.
+From your new features, cast, crew, and keywords, you need to extract the three most important actors, the director and the keywords associated with that movie.</p>
 
 ## Suggestions
 
-Introduce a popularity filter: this recommender would take the 30 most similar movies, calculate the weighted ratings (using the IMDB formula from above), sort movies based on this rating, and return the top 10 movies.
+* Introduce a popularity filter: this recommender would take the 30 most similar movies, calculate the weighted ratings (using the IMDB formula from above), sort movies based on this rating, and return the top 10 movies.
 
-Other crew members: other crew member names, such as screenwriters and producers, could also be included.
+* Other crew members: other crew member names, such as screenwriters and producers, could also be included.
 
-The increasing weight of the director: to give more weight to the director, he or she could be mentioned multiple times in the soup to increase the similarity scores of movies with the same director.
+* The increasing weight of the director: to give more weight to the director, he or she could be mentioned multiple times in the soup to increase the similarity scores of movies with the same director.
